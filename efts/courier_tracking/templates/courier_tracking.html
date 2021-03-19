@@ -1,0 +1,118 @@
+{% extends "home.html" %}
+
+{% block body %}
+
+{% if messages %}
+<script>
+{% for message in messages %}
+
+alert("{{ message }}");
+      
+{% endfor %}
+
+</script>
+{% endif %}
+<table class="table table-bordered" style="border: 3px solid rgb(36, 2, 36);">
+    <thead>
+        <th>Courier Id</th>
+        <th>Name</th>
+        <th>Courier</th>
+        <th>Courier Weight</th>
+        <th>Billing Price</th>
+        <th>View</th>
+        <th>Shipping</th>
+        <th>Cancel</th>
+    </thead>
+    <tbody>
+       
+        <tr>
+            <td>{{a.CourierId}}</td>    
+            <td>{{a.From_Name}}</td>
+            <td>{{a.Product_Name}}</td>
+            <td>{{a.Weight}}</td>
+            <td>{{a.Price}}</td>
+            <td><a href="" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">View</a></td>
+            <td><a href="" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Shipping</a></td>
+            <td><a href="" class="btn btn-secondary">Cancel</a></td>
+    </tbody>
+    </table>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Courier Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table>             
+                  <tbody>
+                       
+                        <tr>
+                            <th>Courier Id</th> 
+                            <td>{{a.CourierId}}</td>
+                        </tr>
+                        <tr>
+                            <th>From Name</th>
+                            <td>{{a.From_Name}}</td>
+                        </tr>
+                        <tr>
+                            <th>From EmailAddress</th>
+                            <td>{{a.From_EmailAddress}}</td>
+                        </tr>   
+                        <tr>
+                            <th>From Gender</th>
+                            <td>{{a.From_Gender}}</td>
+                        </tr>  
+                        <tr>
+                            <th>From Age</th>
+                            <td>{{a.From_Age}}</td>
+                        </tr>    
+                        <tr>
+                            <th>From Address</th>
+                            <td>{{a.From_Address}}</td>
+                        </tr>    
+                        <tr>
+                            <th>From Mobile</th>
+                            <td>{{a.From_Mobile}}</td>
+                        </tr>
+                        <tr>
+                            <th>To Name</th>
+                            <td>{{a.To_Name}}</td>
+                        </tr>
+                        <tr>
+                            <th>To Gender</th>
+                            <td>{{a.To_Gender}}</td>
+                        </tr>    
+                        <tr>
+                            <th>To Address</th>
+                            <td>{{a.To_Address}}</td>
+                        </tr>    
+                        <tr>
+                            <th>To Mobile</th>
+                            <td>{{a.To_Mobile}}</td>
+                        </tr>    
+                        <tr>
+                            <th>Product Name</th>
+                            <td>{{a.Product_Name}}</td>
+                        </tr>    
+                        <tr>
+                            <th>Weight</th>
+                            <td>{{a.Weight}}</td>
+                        </tr>    
+                        <tr>
+                            <th>Price</th>  
+                            <td>{{a.Price}}</td>
+                        </tr>   
+                       
+                  </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %} 

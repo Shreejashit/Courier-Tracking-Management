@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Courier Tracking Home</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/pricing.css' %}" rel="stylesheet">
+
+    <style>
+      #p1{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(53, 3, 82);
+        /* text-align: center; */
+        }
+      #p3{
+        background-color: rgb(243, 219, 83);
+      }
+      #p4{
+        background-color:rgba(247, 155, 70, 0.63);
+      }
+      #p5{
+        padding: auto;
+      }
+    </style>
+  </head>
+
+  <body id="p3">
+    {% if alert %}
+    <script>
+      alert('Welcome {{user}}')
+      </script>
+    {% endif %}
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <img src="{% static 'img/p1.png' %}" style="height: 40px; width:40px;">
+      <h5 class="my-0 mr-md-auto font-weight-normal p-2" id="p1">Courier Tracking Management</h5>
+      <nav class="d-flex flex-row">
+        <a class="p-2" id="p1" href="{% url 'home' %}">Admin</a>
+        <a class="p-2" id="p1" href="{% url 'enterprice' %}">Enterprise</a> 
+        <a class="p-2" id="p1" href="{% url 'coubk' %}">Courier Booking</a>
+        <a class="p-2" id="p1" href="{% url 'billing' %}">Billing</a>
+        <a class="p-2" id="p1" href="{% url 'coutk' %}">Courier Tracking</a>
+        <a class="p-2" id="p1" href="{% url 'ofd' %}">Out For Delivery</a>
+        <a class="p-2" id="p1" href="{% url 'report' %}">Report Data</a>
+      </nav>
+      <a class="btn btn-outline-info" id="p1" href="signin">{{user}}</a>
+    </div>
+  
+    {% block body %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="p5">
+      <h1 class="display-4" id="p1">Efficient Courier Tracking Management System
+      </h1>
+    </div>
+    <div style="width: 90%;margin-left: 5%;">
+      <p class="lead" id="p1" style="text-align: justify;">Courier service providers usually have a very large 
+        network across countries. A courier goes through several places including 
+        distribution center and delivered using transportation services like, aero 
+        plane, ship, road transport etc. All customers would like to track their 
+        consignment through online or via email or SMS, whatever options that might 
+        be convenient to them. Customer can track his/her order, till where the courier 
+        has been reached just by logging in and entering courier number to track the location 
+        of the package. Here we propose a dedicated courier tracking system where customer 
+        may check the status and location of his/her courier. Here every distribution channel 
+        terminal has a system operated by authorized people at that particular point of 
+        distribution. Each distribution has login access. On logging, the person needs to 
+        make an entry of a package number that should be reaching to him/her. This data is 
+        directly uploaded to the main system that now keeps track of latest location and status 
+        of the package through an active internet connection. The data stored on server can 
+        now be used for live package status tracking by customers. Customers may login in to the 
+        server in order to enter their unique courier tracking number. On entering the number 
+        system, they get the last recorded status of that particular package and shows this data 
+        to the user. The user may now track his package as and when needed. The courier tracking 
+        system can be further improved by adding a barcode to every package so that every point 
+        just needs to scan the barcode instead of doing a manual entry of package number.</p>
+      </div>
+      </div>
+
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal" id="p1">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title" id="p1">$0 <small class="text-muted" id="p1">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li id="p1">10 users included</li>
+              <li id="p1">2 GB of storage</li>
+              <li id="p1">Email support</li>
+              <li id="p1">Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-info" id="p1">Sign up for free</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal" id="p1">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title" id="p1">$15 <small class="text-muted" id="p1">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li id="p1">20 users included</li>
+              <li id="p1">10 GB of storage</li>
+              <li id="p1">Priority email support</li>
+              <li id="p1">Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-info" id="p1">Get started</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal" id="p1">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title" id="p1">$29 <small class="text-muted" id="p1">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li id="p1">30 users included</li>
+              <li id="p1">15 GB of storage</li>
+              <li id="p1">Phone and email support</li>
+              <li id="p1">Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-info" id="p1">Contact us</button>
+          </div>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top" style="width: 90%;margin-left: 5%;" id=p4>
+      <div class="row">
+        <div class="col-3 col-md">
+        <img src="{% static 'img/p2.png' %}" style="height: 150px;width: 150px;border-radius: 65%;margin-left: 15%;"><br><br>
+        <large class="d-block mb-3 text-muted" style="margin-left: 4%;">&copy; 2021-2022</large>
+        </div>
+        <div class="col-3 col-md">
+          <h5 id="p1">Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" id="p1" href="#">Cool stuff</a></li>
+            <li><a class="text-muted" id="p1" href="#">Random feature</a></li>
+            <li><a class="text-muted" id="p1" href="#">Team feature</a></li>
+            <li><a class="text-muted" id="p1" href="#">Stuff for developers</a></li>
+            <li><a class="text-muted" id="p1" href="#">Another one</a></li>
+            <li><a class="text-muted" id="p1" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-3 col-md">
+          <h5 id="p1">Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" id="p1" href="#">Resource</a></li>
+            <li><a class="text-muted" id="p1" href="#">Resource name</a></li>
+            <li><a class="text-muted" id="p1" href="#">Another resource</a></li>
+            <li><a class="text-muted" id="p1" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-3 col-md">
+          <h5 id="p1">About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" id="p1" href="#">Team</a></li>
+            <li><a class="text-muted" id="p1" href="#">Locations</a></li>
+            <li><a class="text-muted" id="p1" href="#">Privacy</a></li>
+            <li><a class="text-muted" id="p1" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="{% static 'js/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/vendor/holder.min.js' %}"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>

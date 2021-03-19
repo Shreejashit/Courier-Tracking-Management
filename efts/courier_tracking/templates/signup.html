@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: rgb(51, 7, 80);
+      }
+      body {
+      background-color:rgb(243, 219, 83);
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(206, 47, 179, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #f3e417;
+      }
+      .checkbox a:hover {
+      color: hsl(49, 88%, 54%);
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #2b9a9e; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: rgb(12, 12, 12);
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background:   #f8fafa;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+      img{ 
+           border-radius : 50%;
+       }  
+    
+    </style>
+  </head>
+  {% load static %}
+  <body >
+    {% if alert %}
+     <script>
+       alert('{{alert}}')
+       </script>
+     {% endif %}
+      <div class="main-block">
+      <div class="left-part">
+        <img class="mb-2" img src="{% static 'img/p1.png' %}" alt="" width="200" height="200">
+        <h1>Courier Tracking Management System</h1>
+        <p>Whether you need to send a small parcel or large goods across the city, requiring same day or next day delivery,
+           Couriers and Freight can access courier quotes in seconds to find you the best deal.</p>
+        
+      </div>
+      <form action="home" method="POST">{% csrf_token %}
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Sign up here</h2>
+        </div>
+        <div class="info">
+          <input class="fname" type="text" name="fname" placeholder="Full name">
+          <input type="number" name="age" placeholder="Age">
+          <input type="text" name="email" placeholder="Email">
+          <input type="number" name="number" placeholder="Mobile">
+          <input type="password" name="password" placeholder="Password"> 
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="checkbox"><span>I agree to the privacy policy for our e-commerse.</a></span>
+        </div>
+        <button type="submit">Submit</button><br><br>
+        <a href="signin" style="text-decoration: none;color:#f1ebf5;">Sign up Here</a>
+      </form>
+    </div>
+  </body>
+</html>
